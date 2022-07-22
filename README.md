@@ -1,1 +1,25 @@
 # Evb-SMLM
+
+Note: this is still work in progress currently. In particular, all the codes may not be available, or some documentation might be missing. You may want to check this repository regularly to have the last updates. If you are having trouble, do not hesitate to contact us.
+
+--- General remarks
+This set of codes is provided as part of the event-based Single Molecule Localization Microscopy (SMLM) project developed at Institut Langevin - ESPCI/CNRS, Paris, France by the team of Ignacio Izeddin and Clément Cabriel. See the prepring [ADD REFERENCE BIORXIV] for more information.
+Please use the following contact inforamtion if you would like to comment or contribute to our work, or if you have problems running the codes or questions about the technique or the data and processing steps:
+    Clément Cabriel: clement.cabriel@espci.fr, cabriel.clement@gmail.com
+    Ignacio Izeddin: ignacio.izeddin@espci.fr
+If you use our code or data in your work and wish to publish, please make sure that you cite our work. These codes and datasets is shared under the following licence, all further work using them have to comply with the licencing terms.
+
+--- Content of the repository and general comments
+This repository contains some Python codes (.py) and some datasets containing either raw (.raw) or filtered or processed (.npy) datasets corresponding to event-based SMLM acquisitions.
+Acquisitions were performed with an event-based sensor manufactured by Prophesee (EVK V2 Gen4.1, Prophesee). The pixel size is 67nm, no PSF shaping is used. The acquisitions are performed with a dSTORM buffer under adequate illumination conditions to achieve blinking of the molecules (see the publication for more information).
+All codes were developed and tested on a computer with Windows 10, Python version 3.8.8 and equipped with 128 GB of memory. Multithread options are available for some codes and were successfully tested.
+Datasets containing initial data may be provided either in a .raw or in a .npy format. They are organized as arrays with four fields: 'x' (pixels), 'y' (pixels), 't' (us), 'p' (no unit). x and y are the lateral positions, t is the timestamp and p is the polarity (positive or negative).
+
+--- Specific remarks about each dataset and code
+* 'AF647_coverslip.raw': raw dataset containing 10 seconds of an acquisition performed on Alexa Fluor 647 deposited on a coverslip. Can be used with the read data code or with the localization code.
+* 'Read_data_evb.py': code to read raw datasets and perform some data cropping and optional basic data filtering and export the results as .npy datasets. Can be used to generate time frames and export them as .tif stack files.
+
+--- Code user guide for 'Read_data_evb.py':
+* Important: This code uses the raw data reader provided by Metavision. Therefore, it requires installing the Metavision Essentials package available here: https://www.prophesee.ai/metavision-intelligence-essentials-download/
+  We used Metavision Essentials 2.3.0, which runs only with Python 3.7 or higher. Newer versions of Metavision Essentials may work.
+* Description of the parameters:
