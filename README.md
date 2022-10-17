@@ -3,7 +3,7 @@
 Note: this is still work in progress currently. In particular, all the codes may not be available, or some documentation might be missing. You may want to check this repository regularly to have the last updates. If you are having trouble, do not hesitate to contact us.
 
 --- General remarks
-This set of codes is provided as part of the event-based Single Molecule Localization Microscopy (SMLM) project developed at Institut Langevin - ESPCI/CNRS, Paris, France by the team of Ignacio Izeddin and Clément Cabriel. See the prepring [ADD REFERENCE BIORXIV] for more information.
+This set of codes is provided as part of the event-based Single Molecule Localization Microscopy (SMLM) project developed at Institut Langevin - ESPCI/CNRS, Paris, France by the team of Ignacio Izeddin and Clément Cabriel. See the preprint [bioRxiv 2022.07.22.501162; https://doi.org/10.1101/2022.07.22.501162] for more information.
 Please use the following contact inforamtion if you would like to comment or contribute to our work, or if you have problems running the codes or questions about the technique or the data and processing steps:
     Clément Cabriel: clement.cabriel@espci.fr, cabriel.clement@gmail.com
     Ignacio Izeddin: ignacio.izeddin@espci.fr
