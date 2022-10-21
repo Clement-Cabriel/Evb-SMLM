@@ -22,6 +22,7 @@ Files containing initial data may be provided either in a .raw or in a .npy form
 
 * 'AF647_coverslip.raw': raw dataset containing 10 seconds of an acquisition performed on Alexa Fluor 647 deposited on a coverslip. Can be used with the read data code or with the localization code.
 * 'AF647_tubulin.zip': [coming soon] raw dataset cotaining a part of an acquiition performed on Alexa Fluor 647 targetting the alpha-tubulin in fixed COS-7 cells. Can be used with the read data code or with the localization code.
+* 'AF647_tubulin.zip': raw dataset cotaining a part of an acquiition performed on Alexa Fluor 647 targetting the alpha-tubulin in fixed COS-7 cells. Can be used with the read data code or with the localization code.
 * 'AF647_coverslip_sensitivity.zip': raw datasets containing 5 seconds of acquisitions performed on Alexa Fluor 647 deposited on a coverslip  with dSTORM buffer for different sensitivities. Acquisitions performed with the same conditions aside from the sensitivity. Contains 'AF647_coverslip-low_sentitivity', 'AF647_coverslip-standard_sensitivity', 'AF647_coverslip-high_sentitivity'. Can be used with the read data code or with the localization code.
 * 'Read_data_evb.py': code to read raw datasets and perform some data cropping and optional basic data filtering and export the results as .npy datasets. Can be used to generate time frames and export them as .tif stack files.
 * 'Localization_eventbased_blinking.py': [coming soon] code to perform the localization of molecules on blinking movies
@@ -31,3 +32,6 @@ Files containing initial data may be provided either in a .raw or in a .npy form
 * Important: This code uses the raw data reader provided by Metavision. Therefore, it requires installing the Metavision Essentials package available here: https://www.prophesee.ai/metavision-intelligence-essentials-download/
   We used Metavision Essentials 2.3.0, which runs only with Python 3.7 or higher. Newer versions of Metavision Essentials may work.
 * Description of the parameters: [coming soon]
+
+--- Code user guide for 'Localization_eventbased_blinking.py':
+* [coming soon]
