@@ -33,7 +33,22 @@ Files containing initial data may be provided either in a .raw or in a .npy form
 
 * Important: This code uses the raw data reader provided by Metavision. Therefore, it requires installing the Metavision Essentials package available here: https://www.prophesee.ai/metavision-intelligence-essentials-download/
   We used Metavision Essentials 2.3.0, which runs only with Python 3.7 or higher. Newer versions of Metavision Essentials may work.
-* Description of the parameters: [coming soon]
+* Usage: download the .py file, set the parameters and run the code
+* Description of the parameters (more details are available directly in the code file):
+    - 'filepath': complete path to the data file (e.g. 'C:/path/to/data.raw'). The data file can be .raw or .npy
+    - 'buffer_size': memory allocated to the file import. Large files require higher values, wuich require the computer to have more memory. 1e9 works fine on a 128 GB memory computer, 1e7 should work on any computer and be sufficient for the small datasets provided
+    - 'time_limits': time limits of the data pre-filtering
+    - 'xy_limits': ROI for the data prefiltering
+    - 'discard_up', 'discard_down': can be used to restrict the data to negative-only or positive-only events
+    - 'skip_filtering': use to skip the spatio-temporal filtering step. This step is usually long and unnecessary for localization, but can be useful for data display. In the article, all the data used was unfiltered
+    - 'space_gating', 'time_gating', 'detection_threshold': parameters of the spation-temporal filtering step. For each event, all the neighbors in a [-space_gating,+space_gating] pixels and [-time_gating,+time_gating] milliseconds neighborhood. The event is kept only if the number of neighbors is above or equal to detectionthreshold
+    - 'export_event_data': used to export the filtered event list
+    - 'export_frames': used to export the generated time frame sequence
+    - 'xy_bin': xy binning to downsample the frames. Set =1 to skip the binning
+    - 'time_bin': time bin of the frame generation
+    - 'integrate_sighal': use to accumulate the events over time in order to reconstruct a camera-like image. This functionality is provided only for visualization convenience, and is not meant to be precise in terms of photometry
+    - 'sign_display': event display type for the frames. Can be used to reconstruct the frames of the positive-only or negative-only events, or both regardless of their sign, or both respective of their sign
+    - 'sum_all_frames': used to sum all the events of the filtered dataset in only one frame, typically to reconstruct a wide-field-like diffraction-limited image of the sample
 
 --- Code user guide for 'Localization_eventbased_blinking.py':
 * [coming soon]
