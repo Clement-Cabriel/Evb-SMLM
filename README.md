@@ -21,7 +21,6 @@ Files containing initial data may be provided either in a .raw or in a .npy form
 --- Specific remarks about each dataset
 
 * 'AF647_coverslip.raw': raw dataset containing 10 seconds of an acquisition performed on Alexa Fluor 647 deposited on a coverslip. Can be used with the read data code or with the localization code.
-* 'AF647_tubulin.zip': [coming soon] raw dataset cotaining a part of an acquiition performed on Alexa Fluor 647 targetting the alpha-tubulin in fixed COS-7 cells. Can be used with the read data code or with the localization code.
 * 'AF647_tubulin.zip': raw dataset cotaining a part of an acquiition performed on Alexa Fluor 647 targetting the alpha-tubulin in fixed COS-7 cells. Can be used with the read data code or with the localization code.
 * 'AF647_coverslip_sensitivity.zip': raw datasets containing 5 seconds of acquisitions performed on Alexa Fluor 647 deposited on a coverslip  with dSTORM buffer for different sensitivities. Acquisitions performed with the same conditions aside from the sensitivity. Contains 'AF647_coverslip-low_sentitivity', 'AF647_coverslip-standard_sensitivity', 'AF647_coverslip-high_sentitivity'. Can be used with the read data code or with the localization code.
 
