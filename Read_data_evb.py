@@ -45,7 +45,7 @@ filepath='C:/absolute/path/to/data/AF647_coverslip.raw'
 buffer_size=1e8                 # increase the buffer size if the input file is too large to be loaded. Decrease the buffer size if the PC is out of memory. Tested successfully with buffer size = 4e9 for 128 Gb of memory
 
 # General filtering parameters
-time_limits=[0,1]             # Time restriction of the dataset (in seconds) [t_min,t_max]
+time_limits=[0,1]             # Time restriction of the dataset (in seconds) [t_min,t_max]. Set =[0,1e9] to keep all the data
 xy_limits='auto'                  # ROI restriction (in pixels) [x_min,y_min,x_max,y_max]. =None not to filter. ='auto' to automatically detect the limits
 discard_up=False                # =True to discard positive events (rising edges)
 discard_down=False              # =True to discard negative events (falling edges)
