@@ -27,7 +27,7 @@ Files containing initial data may be provided either in a .raw or in a .npy form
 --- Specific remarks about each code
 
 * 'Read_data_evb.py': code to read raw datasets and perform some data cropping and optional basic data filtering and export the results as .npy datasets. Can be used to generate time frames and export them as .tif stack files.
-* 'Localization_eventbased_blinking.py': code to perform the localization of molecules on blinking movies
+* 'Localization_eventbased_blinking.py': [coming soon] code to perform the localization of molecules on blinking movies
 
 --- Code user guide for 'Read_data_evb.py'
 
