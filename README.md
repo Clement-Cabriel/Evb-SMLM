@@ -8,7 +8,7 @@ This set of codes is provided as part of the event-based Single Molecule Localiz
 Please use the following contact inforamtion if you would like to comment or contribute to our work, or if you have problems running the codes or questions about the technique or the data and processing steps:
     Clément Cabriel: clement.cabriel@espci.fr, cabriel.clement@gmail.com
     Ignacio Izeddin: ignacio.izeddin@espci.fr
-If you use our code or data in your work and wish to publish, please make sure that you cite our work. 
+If you use our code or data in your work and wish to publish, please make sure that you cite our work. If you would like to use them for commercial purposes, please contact us.
 <!-- These codes and datasets is shared under the following licence [ADD LICENCE], all further work using them have to comply with the licencing terms. -->
 
 --- Content of the repository and general comments
