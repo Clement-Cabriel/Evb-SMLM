@@ -34,7 +34,7 @@ Files containing initial data may be provided either in a .raw or in a .npy form
 
 * Important: This code uses the raw data reader provided by Metavision. Therefore, it requires installing the Metavision Essentials package available here: https://www.prophesee.ai/metavision-intelligence-essentials-download/
   We used Metavision Essentials 2.3.0, which runs only with Python 3.7 or higher. Newer versions of Metavision Essentials may work.
-* Usage: download the .py file, set the parameters and run the code
+* Usage: download the repository and unzip it, unzip the datasets, set the parameters and run the code
 * Description of the parameters (more details are available directly in the code file):
     - 'filepath': complete path to the data file (e.g. 'C:/path/to/data.raw'). The data file can be .raw or .npy
     - 'buffer_size': memory allocated to the file import. Large files require higher values, wuich require the computer to have more memory. 1e9 works fine on a 128 GB memory computer, 1e7 should work on any computer and be sufficient for the small datasets provided
