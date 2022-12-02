@@ -51,7 +51,7 @@ Files containing initial data may be provided either in a .raw or in a .npy form
     - 'sign_display': event display type for the frames. Can be used to reconstruct the frames of the positive-only or negative-only events, or both regardless of their sign, or both respective of their sign
     - 'sum_all_frames': used to sum all the events of the filtered dataset in only one frame, typically to reconstruct a wide-field-like diffraction-limited image of the sample
 
---- Code user guide for 'Localization_eventbased_blinking_dev.py':
+--- Code user guide for 'Localization_eventbased_blinking.py':
 
 * Important: This code may use the raw data reader provided by Metavision (for .raw files only, not necessary for .npy files). Therefore, it requires installing the Metavision Essentials package available here: https://www.prophesee.ai/metavision-intelligence-essentials-download/
   We used Metavision Essentials 2.3.0, which runs only with Python 3.7 or higher. Newer versions of Metavision Essentials may work.
