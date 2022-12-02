@@ -71,7 +71,7 @@ Files containing initial data may be provided either in a .raw or in a .npy form
     - 'area_radius': Radius of the fitting (or center of mass calculation) area (in pixels)
     - 'time_area_limits': Relative time limits (in ms) of the events to consider within an ROI. =[t_minus,t_plus]. The events considered for the localization are those within [t0-t_minus,t0+t_plus] where t0 is the detected time of the ROI
     - 'localization_method': Method for the PSF localization. ='COM' for center of mass calculation, ='Gaussian' for Gaussian fitting
-    - 'display_frames': =True to display the frames, =False not to
+    - 'display_frames': =True to display the frames, =False not to. Frames should be displayed to check the PSF detection parameters in particular.
     - 'number_frames_display': Number of frames to display
     - 'export_localized_results': =True to save the localized results; =False not to
 
