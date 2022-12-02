@@ -51,5 +51,27 @@ Files containing initial data may be provided either in a .raw or in a .npy form
     - 'sign_display': event display type for the frames. Can be used to reconstruct the frames of the positive-only or negative-only events, or both regardless of their sign, or both respective of their sign
     - 'sum_all_frames': used to sum all the events of the filtered dataset in only one frame, typically to reconstruct a wide-field-like diffraction-limited image of the sample
 
---- Code user guide for 'Localization_eventbased_blinking.py':
-* [coming soon]
+--- Code user guide for 'Localization_eventbased_blinking_dev.py':
+
+* Important: This code may use the raw data reader provided by Metavision (for .raw files only, not necessary for .npy files). Therefore, it requires installing the Metavision Essentials package available here: https://www.prophesee.ai/metavision-intelligence-essentials-download/
+  We used Metavision Essentials 2.3.0, which runs only with Python 3.7 or higher. Newer versions of Metavision Essentials may work.
+* Usage: download the repository and unzip it, unzip the datasets, set the parameters and run the code
+* Description of the parameters (more details are available directly in the code file):
+    - 'filepath': complete path to the data file (e.g. 'C:/path/to/data.raw'). The data file can be .raw or .npy
+    - 'buffer_size': memory allocated to import the data (in arbitrary units). Increase the buffer size if the input file is too large to be loaded. Decrease the buffer size if the PC is out of memory. Tested successfully with buffer size = 4e9 for 128 Gb of memory
+    - 'pixel_size': pixel size in the object plane (in nm). =67 for the datasets provided
+    - 'multithread': =True to use multithread parallelization; =False not to. Note: multithread parallelization increases calculation speed
+    - 'time_limits': Time pre-filtering of the data. Only events in the range will be kept. =[t_min,t_max] (in seconds)
+    - 'xy_limits': ROI selection (in pixels) [x_min,y_min,x_max,y_max]. =None not to filter. ='auto' to automatically detect the limits
+    - 'threshold_detection': Wavelet detection threshold. Decreasing the value makes the detection more sensitive (and potentially more noisy)
+    - 'exclusion_radius': Radius of the exclusion area (if two or more PSFs are closer than twice the value, they will all be discarded) (in pixels)
+    - 'min_diameter': Minimum radius of the thresholded area (in pixels)
+    - 'max_diameter': Maximum radius of the thresholded area (in pixels)
+    - 'time_bin_frames': Time bin (in ms) of the frames. Used only for the PSF detection (the localization is performed on the eevent list and not on the frames)
+    - 'area_radius': Radius of the fitting (or center of mass calculation) area (in pixels)
+    - 'time_area_limits': Relative time limits (in ms) of the events to consider within an ROI. =[t_minus,t_plus]. The events considered for the localization are those within [t0-t_minus,t0+t_plus] where t0 is the detected time of the ROI
+    - 'localization_method': Method for the PSF localization. ='COM' for center of mass calculation, ='Gaussian' for Gaussian fitting
+    - 'display_frames': =True to display the frames, =False not to
+    - 'number_frames_display': Number of frames to display
+    - 'export_localized_results': =True to save the localized results; =False not to
+
