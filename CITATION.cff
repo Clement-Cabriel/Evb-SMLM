@@ -13,19 +13,26 @@ authors:
     family-names: Cabriel
     email: cabriel.clement@gmail.com
     affiliation: >-
-      Institut Langevin, ESPCI Paris, Université PSL,
-      CNRS, 75005 Paris, France
+      Institut Langevin, ESPCI Paris, Université PSL, CNRS,
+      75005 Paris, France
+  - given-names: Tual
+    family-names: Monfort
+    affiliation: >-
+      Sorbonne Université, INSERM, CNRS, Institut de la
+      Vision, Paris, France; National Hospital of
+      Ophthalmology (CHNO) of Quinze-Vingts, INSERM-DGOS CIC
+      1423, Paris, France
   - given-names: Christian G.
     family-names: Specht
     affiliation: >-
-      DHNS, Inserm U1195, Université Paris-Saclay,
-      94276 Le Kremlin-Bicêtre, France
+      DHNS, Inserm U1195, Université Paris-Saclay, 94276 Le
+      Kremlin-Bicêtre, France
     orcid: 'https://orcid.org/0000-0001-6038-7735'
   - given-names: Ignacio
     family-names: Izeddin
     email: ignacio.izeddin@espci.fr
     affiliation: >-
-      Institut Langevin, ESPCI Paris, Université PSL,
-      CNRS, 75005 Paris, France
+      Institut Langevin, ESPCI Paris, Université PSL, CNRS,
+      75005 Paris, France
     orcid: 'https://orcid.org/0000-0002-8476-3915'
-url: "https://github.com/Clement-Cabriel/Evb-SMLM.git"
+url: 'https://github.com/Clement-Cabriel/Evb-SMLM.git'
