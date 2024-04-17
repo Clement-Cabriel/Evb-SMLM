@@ -42,7 +42,6 @@ class DCC_workflow():
         #-----------------------------------------------------------------------------
         
         # Acquisition parameters
-        self.filepath='//oaxaca/Data Backup/Clement/2022-09-13/COS7 alpha-tub-DNAPAINT-Atto655 permeab 0.5% Nikon EMCCD-gen4 8nM/B_gen4_SMLM60%_62-105/recording_2022-09-13T18-17-36.106Z_pos_localized.npy'
         self.filepath='Tubulin_DCC_test.npy'
         self.initial_pixel=80.              # Localization pixel size (in nm). Set =1 if the coordinates are already in nm
         
