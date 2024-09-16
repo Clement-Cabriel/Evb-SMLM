@@ -5,18 +5,28 @@ Note: this is still work in progress currently. In particular, all the codes may
 --- General remarks
 
 This set of codes is provided as part of the event-based Single Molecule Localization Microscopy (SMLM) project developed at Institut Langevin - ESPCI/CNRS, Paris, France by the team of Ignacio Izeddin and Clément Cabriel. See the published article [Cabriel, C., Monfort, T., Specht, C.G. et al. Event-based vision sensor for fast and dense single-molecule localization microscopy. Nat. Photon. 17, 1105–1113 (2023), https://doi.org/10.1038/s41566-023-01308-8] or the preprint [https://doi.org/10.1101/2022.07.22.501162] for more information.
+
 Please use the following contact inforamtion if you would like to comment or contribute to our work, or if you have problems running the codes or questions about the technique or the data and processing steps:
-    Clément Cabriel: clement.cabriel@espci.fr, cabriel.clement@gmail.com
-    Ignacio Izeddin: ignacio.izeddin@espci.fr
+
+* Clément Cabriel: clement.cabriel@espci.fr, cabriel.clement@gmail.com
+* Ignacio Izeddin: ignacio.izeddin@espci.fr
+    
 If you use our code or data in your work and wish to publish, please make sure that you cite our work. If you would like to use them for commercial purposes, please contact us.
 <!-- These codes and datasets is shared under the following licence [ADD LICENCE], all further work using them have to comply with the licencing terms. -->
 
 --- Content of the repository and general comments
 
 This repository contains some Python codes (.py) and some datasets containing either raw (.raw) or filtered or processed (.npy) datasets corresponding to event-based SMLM acquisitions. Note: some datasets are compressed sue to file size limitations. They must be decompressed before they can be used.
+
 Acquisitions were performed with an event-based sensor manufactured by Prophesee (EVK V2 Gen4.1, Prophesee). The pixel size is 67nm, no PSF shaping is used. The acquisitions are performed with a dSTORM buffer under adequate illumination conditions to achieve blinking of the molecules (see the publication for more information).
-All codes were developed and tested on a computer with Windows 10, Python version 3.8.8 and equipped with 128 GB of memory. Multithread options are available for some codes and were successfully tested.
-Files containing initial data may be provided either in a .raw or in a .npy format. They are organized as arrays with four fields: 'x' (pixels), 'y' (pixels), 't' (us), 'p' (no unit). x and y are the lateral positions, t is the timestamp and p is the polarity (positive or negative).
+
+All codes were developed and tested on a computer with Windows 10, Python version 3.8.8 and equipped with 128 GB of memory. Multithread options are available for some codes and were successfully tested. No GPU is required. The environment file "Eve_SMLM_environment.yml" provided in the repository can be used to run the codes.
+
+Datasets containing initial data may be provided either in a .raw or in a .npy format. They are organized as arrays with four fields: 'x' (pixels), 'y' (pixels), 't' (us), 'p' (no unit). x and y are the lateral positions, t is the timestamp and p is the polarity (positive or negative).
+
+Important: Some of the code use the raw data reader provided by Metavision. Therefore, they require installing the Metavision Essentials package available here: [ https://www.prophesee.ai/metavision-intelligence-essentials-download/ ] or [https://files.prophesee.ai/share/dists/public/windows/baiTh5si/ ]. We used Metavision Essentials 2.3.0 or 4.3.0. Note that these require specific versions of Python (3.8 or 3.9 for Metavision 4.3.0), and that the codes were tested only with Python 3.8.8. Other versions of Python will likely not work. It is important to follow closely the installation guidelines [ https://docs.prophesee.ai/stable/installation/windows.html ]. Note that the functions provided by Metavision are only required to read the .raw data files, so .npy data files can be read without installing Metavision Essentials (if this installation step is skipped, please make sure that the line "from metavision_core.event_io.raw_reader import RawReader" is removed from the code).
+
+See the section "Known issues" for information about fixes and workarounds if you encounter errors when running the codes.
 
 --- Specific remarks about each dataset
 
@@ -34,8 +44,6 @@ Files containing initial data may be provided either in a .raw or in a .npy form
 
 --- Code user guide for 'Read_data_evb.py'
 
-* Important: This code uses the raw data reader provided by Metavision. Therefore, it requires installing the Metavision Essentials package available here: https://www.prophesee.ai/metavision-intelligence-essentials-download/
-  We used Metavision Essentials 2.3.0, which runs only with Python 3.7 or higher. Newer versions of Metavision Essentials may work.
 * Usage: download the repository and unzip it, unzip the datasets, set the parameters and run the code
 * Recommended test datasets: 'AF647_coverslip_sensitivity.zip','AF647_coverslip.raw','AF647_tubulin.zip'
 * Input: Events .raw file or events .npy file: (columns) 'x': x position (in pix), 'y': y position (in pix), 'p': event polarity, 't': timestamp (in us)
@@ -60,8 +68,6 @@ Files containing initial data may be provided either in a .raw or in a .npy form
 
 --- Code user guide for 'Localization_eventbased_blinking.py':
 
-* Important: This code may use the raw data reader provided by Metavision (for .raw files only, not necessary for .npy files). Therefore, it requires installing the Metavision Essentials package available here: https://www.prophesee.ai/metavision-intelligence-essentials-download/
-  We used Metavision Essentials 2.3.0, which runs only with Python 3.7 or higher. Newer versions of Metavision Essentials may work.
 * Usage: download the repository and unzip it, unzip the datasets, set the parameters and run the code
 * Recommended test dataset: 'AF647_tubulin.zip'
 * Input: Events .raw file or events .npy file: (columns) 'x': x position (in pix), 'y': y position (in pix), 'p': event polarity, 't': timestamp (in us)
