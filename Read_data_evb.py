@@ -41,7 +41,7 @@ from metavision_core.event_io.raw_reader import RawReader
 #-----------------------------------------------------------------------------
 
 # Import parameters
-filepath='C:/Users/Clement/Documents/Data/Ricardo-Bruno/2022-05-03/recording_2022-05-03T19-29-53.466Z_t_0-442s.npy'
+filepath=''
 buffer_size=1e8                 # increase the buffer size if the input file is too large to be loaded. Decrease the buffer size if the PC is out of memory. Tested successfully with buffer size = 4e9 for 128 Gb of memory
 frame_size=[1280,720]           # Size of the sensor array (in pixels) [x,y]. =[480,640] for the gen3; =[1280,720] for the gen4
 
@@ -208,3 +208,4 @@ if export_frames:
     else:Image.fromarray(frames[:,:,0]).save(filepath[:-4]+'_frames_sum_'+sign_display+'.tif')
 print('Frames generation done')
 print('')
+
