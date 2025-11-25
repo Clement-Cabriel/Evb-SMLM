@@ -13,6 +13,8 @@ Created on Wed Jan 12 19:10:13 2022
 # Clément Cabriel
 # Institut Langevin, ESPCI Paris / CNRS
 # clement.cabriel@espci.fr , cabriel.clement@gmail.com
+# ORCID: 0000-0002-0316-0312
+# GitHub: https://github.com/Clement-Cabriel
 #-----------------------------------------------------------------------------
 # Python 3.8.0
 # Set the parameters below, then run the program
@@ -466,3 +468,4 @@ if export_localized_results:
 print('')
 print('Done')
 print('')
+
