@@ -13,6 +13,8 @@ Created on Wed Sep 22 20:58:27 2021
 # Clément Cabriel
 # Institut Langevin, ESPCI Paris / PSL University / CNRS
 # clement.cabriel@espci.fr , cabriel.clement@gmail.com
+# ORCID: 0000-0002-0316-0312
+# GitHub: https://github.com/Clement-Cabriel
 #-----------------------------------------------------------------------------
 # Python 3.8.8
 # Set the parameters below, then run the program
@@ -209,3 +211,4 @@ if export_frames:
 print('Frames generation done')
 
 print('')
+
