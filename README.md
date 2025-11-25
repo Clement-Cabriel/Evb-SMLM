@@ -38,11 +38,11 @@ See the section "Known issues" for information about fixes and workarounds if yo
 
 --- Specific remarks about each code
 
-* 'Read_data_evb.py': code to read raw datasets and perform some data cropping and optional basic data filtering and export the results as .npy datasets. Can be used to generate time frames and export them as .tif stack files.
+* 'Read_eventbased_data.py': code to read raw datasets and perform some data cropping and optional basic data filtering and export the results as .npy datasets. Can be used to generate time frames and export them as .tif stack files.
 * 'Localization_eventbased_blinking.py': code to perform the localization of molecules in raw blinking datasets
 * 'Drift_correction.py': code to correct the drift after the localization of the molecules
 
---- Code user guide for 'Read_data_evb.py'
+--- Code user guide for 'Read_eventbased_data.py'
 
 * Usage: download the repository and unzip it, unzip the datasets, set the parameters and run the code
 * Recommended test datasets: 'AF647_coverslip_sensitivity.zip','AF647_coverslip.raw','AF647_tubulin.zip'
