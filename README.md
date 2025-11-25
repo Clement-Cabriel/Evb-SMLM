@@ -52,7 +52,7 @@ See the section "Known issues" for information about fixes and workarounds if yo
     - Frames .tif image stack
 * Description of the parameters (more details are available directly in the code file):
     - 'filepath': complete path to the data file (e.g. 'C:/path/to/data.raw'). The data file can be .raw or .npy
-    - 'buffer_size': memory allocated to the file import. Large files require higher values, wuich require the computer to have more memory. 1e9 works fine on a 128 GB memory computer, 1e7 should work on any computer and be sufficient for the small datasets provided
+    - 'buffer_size': memory allocated to the file import. Large files require higher values, which in turn require the computer to have more RAM. 1e9 works fine on a 128 GB memory computer, 1e7 should work on any computer and be sufficient for the small datasets provided
     - 'time_limits': time limits of the data pre-filtering
     - 'xy_limits': ROI for the data prefiltering
     - 'discard_up', 'discard_down': can be used to restrict the data to negative-only or positive-only events
