@@ -34,7 +34,6 @@ from matplotlib import animation
 import matplotlib
 import imageio
 from PIL import Image
-from metavision_core.event_io.raw_reader import RawReader
 
 #-----------------------------------------------------------------------------
 # USER DEFINED PARAMETERS
@@ -82,6 +81,7 @@ off_value=-1.
 # Data loading
 print('Loading data...')
 if filepath[-4:]=='.raw':
+    from metavision_core.event_io.raw_reader import RawReader
     record_raw = RawReader(filepath,max_events=int(buffer_size))
     sums = 0
     while not record_raw.is_done() and record_raw.current_event_index() < buffer_size:
@@ -207,4 +207,5 @@ if export_frames:
     elif sum_all_frames==False and output_depth==16:imageio.mimwrite(filepath[:-4]+'_frames_'+str(time_bin/1000)+'ms-'+str(xy_bin)+'pix_'+sign_display+'.tif', np.swapaxes(np.swapaxes(frames,0,2),1,2).astype('int16'))
     else:Image.fromarray(frames[:,:,0]).save(filepath[:-4]+'_frames_sum_'+sign_display+'.tif')
 print('Frames generation done')
+
 print('')
